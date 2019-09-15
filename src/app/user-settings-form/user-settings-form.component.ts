@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserSettings } from '../data/user-settings';
+import { DataService } from '../data/data.service';
 
 @Component({
   selector: 'app-user-settings-form',
@@ -19,7 +20,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   userSetting : UserSettings = { ...this.originalUserSettings };
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
